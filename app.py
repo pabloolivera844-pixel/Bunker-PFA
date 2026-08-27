@@ -264,25 +264,87 @@ function filtrarTabla(inputId, tablaId) {
 
 HTML_LOGIN = """
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><title>Login D.I.F.</title>
-<style>
-body { background: #0d1117; color: #c9d1d9; font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-.c { width: 100%%; max-width: 350px; padding: 20px; background: #161b22; border-radius: 8px; border: 1px solid #30363d; }
-input { background: #0d1117; border: 1px solid #30363d; color: #fff; padding: 8px; width: 100%%; margin: 5px 0 15px 0; box-sizing: border-box; }
-.btn { background: #238636; color: #fff; padding: 10px; border: none; border-radius: 4px; width: 100%%; font-weight: bold; cursor: pointer; }
-.err { background: #382a04; color: #e3b341; padding: 8px; border-radius: 4px; margin-bottom: 10px; font-size: 12px; text-align: center; }
-</style></head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>S.I.G.M.A. - D.F.I. // Acceso Restringido</title>
+    <style>
+        body { 
+            background-color: #05070b; 
+            color: #00ffcc; 
+            font-family: 'Courier New', Courier, monospace; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        .login-card { 
+            background: #0b0f19; 
+            border: 2px solid #00ffcc; 
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3); 
+            padding: 30px; 
+            border-radius: 8px; 
+            text-align: center; 
+            width: 320px; 
+        }
+        .shield-img { 
+            width: 90px; 
+            height: 90px; 
+            margin-bottom: 15px; 
+            border-radius: 50%; 
+            border: 2px solid #d4af37; 
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        h3 { color: #d4af37; letter-spacing: 2px; margin-bottom: 20px; font-size: 16px; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { font-size: 12px; color: #8ba99e; display: block; margin-bottom: 5px; }
+        input { 
+            width: 100%; 
+            background: #020408; 
+            border: 1px solid #1f3a34; 
+            color: #00ffcc; 
+            padding: 8px; 
+            box-sizing: border-box; 
+            border-radius: 4px; 
+        }
+        .btn-login { 
+            background: #00ffcc; 
+            color: #05070b; 
+            border: none; 
+            padding: 10px; 
+            width: 100%; 
+            font-weight: bold; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        .btn-login:hover { background: #00b386; }
+        .err { background: #382a04; color: #e3b341; padding: 8px; border-radius: 4px; margin-bottom: 10px; font-size: 12px; }
+    </style>
+</head>
 <body>
-<div class="c">
-    <h2 style="color:#58a6ff; margin-top:0; text-align:center;">🔒 D.I.F. Login</h2>
-    {% if error %}<div class="err">{{error}}</div>{% endif %}
-    <form method="POST">
-        <label>Usuario:</label><input type="text" name="usr" required>
-        <label>Llave:</label><input type="password" name="llv" required>
-        <button type="submit" class="btn">Entrar</button>
-    </form>
-</div></body></html>
+    <div class="login-card">
+        <img src="/static/escudo_dfi.png" alt="Escudo DFI" class="shield-img">
+        <h3>S.I.G.M.A. // LOGIN</h3>
+        {% if error %}<div class="err">{{error}}</div>{% endif %}
+        <form method="POST">
+            <div class="form-group">
+                <label>USUARIO DE MANDO:</label>
+                <input type="text" name="usr" required>
+            </div>
+            <div class="form-group">
+                <label>LLAVE DE ACCESO:</label>
+                <input type="password" name="llv" required>
+            </div>
+            <button type="submit" class="btn-login">AUTORIZAR ACCESO</button>
+        </form>
+    </div>
+</body>
+</html>
 """
+
 
 @app.route("/", methods=["GET", "POST"])
 def login():
