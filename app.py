@@ -16,14 +16,35 @@ def db_load():
             for k in ["civiles", "vehiculos", "notas_campo", "archivos_desclasificados"]:
                 if k not in d: d[k] = []
             return d
-    return {
-        "oficiales_pfa": [{"id": "PFA-001", "nombre": "Alexis", "rango": "Comisario General", "llave": "key_alexis_cg2026", "acceso": "Oficial", "intentos": 0, "bloqueado": False}],
-        "dfi_director": [{"id": "DIF-001", "nombre": "Pablo", "rango": "Director DFI", "llave": "llave_maestra_dfi", "acceso": "Master_Total", "intentos": 0, "bloqueado": False}],
+        return {
+        "oficiales_pfa": [
+            {
+                "id": "PFA-001", 
+                "nombre": "Alexis", 
+                "rango": "Comisario General", 
+                "llave": os.environ.get("ALEXIS_LLAVE", "key_alexis_cg2026")
+            },
+            {
+                "id": "PFA-002", 
+                "nombre": "Joel", 
+                "rango": "Comisario", 
+                "llave": os.environ.get("JOEL_LLAVE", "key_joel_com2026")
+            }
+        ],
+        "dfi_director": [
+            {
+                "id": "DIF-001", 
+                "nombre": "Pablo", 
+                "rango": "Director DFI", 
+                "llave": os.environ.get("DIRECTOR_LLAVE", "llave_maestra_dfi")
+            }
+        ],
         "civiles": [{"id_civil": "CIV-1001", "nombre": "Base Central", "nacionalidad": "Argentina", "estado": "Verificado"}],
         "vehiculos": [{"patente": "AB123CD", "modelo": "Patrulla Federal", "estado": "Activo"}],
-        "notas_campo": [{"autor": "Director Pablo", "texto": "Sistema operativo inicializado.", "timestamp": "2026-02-25 08:00:00"}],
+        "notas_campo": [{"autor": "Director Pablo", "texto": "Sistema operativo inicializado y blindado.", "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S')}],
         "archivos_desclasificados": []
     }
+
 
 def db_save(d):
     with open(DB_FILE, "w", encoding="utf-8") as f: json.dump(d, f, indent=4, ensure_ascii=False)
