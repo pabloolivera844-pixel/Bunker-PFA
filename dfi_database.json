@@ -1,0 +1,65 @@
+{
+    "CPM-001": {
+        "nombre": "Alexis",
+        "rango": "Comisario General",
+        "unidades": "Unidad 1702 (BMW M4) | Unidad 1703 (BMW X7)",
+        "amenaza": "1 (Comando Superior)",
+        "estado": "ACTIVO / LÍDER"
+    },
+    "CPM-002": {
+        "nombre": "Joel",
+        "rango": "Comisario",
+        "unidades": "Toyota Hilux | BMW M5",
+        "amenaza": "2 (Plana Mayor)",
+        "estado": "ACTIVO"
+    },
+    "CPM-003": {
+        "nombre": "Bruno",
+        "rango": "Inspector",
+        "unidades": "Unidad 8206 (Toyota Hilux) | Unidad 2200 (Volkswagen Vento)",
+        "amenaza": "3",
+        "estado": "ACTIVO"
+    },
+    "CPM-004": {
+        "nombre": "Luis",
+        "rango": "Inspector",
+        "unidades": "Unidad 8250 (Toyota Hilux)",
+        "amenaza": "3",
+        "estado": "ACTIVO"
+    },
+    "CPM-005": {
+        "nombre": "Gael",
+        "rango": "Oficial",
+        "unidades": "Unidad 8200 (Ford Raptor)",
+        "amenaza": "4",
+        "estado": "ACTIVO"
+    },
+    "CPM-006": {
+        "nombre": "Morguez",
+        "rango": "Oficial",
+        "unidades": "Unidad 8241 (Chevrolet Silverado)",
+        "amenaza": "4",
+        "estado": "ACTIVO"
+    },
+    "CPM-007": {
+        "nombre": "Bauti",
+        "rango": "Oficial",
+        "unidades": "Unidad 8220 (Ford Raptor)",
+        "amenaza": "4",
+        "estado": "ACTIVO"
+    },
+    "CPM-008": {
+        "nombre": "Ian",
+        "rango": "Oficial",
+        "unidades": "Unidad 8230 (Dodge F-1500)",
+        "amenaza": "4",
+        "estado": "ACTIVO"
+    },
+    "": {
+        "nombre": "",
+        "rango": "",
+        "unidades": "",
+        "amenaza": "",
+        "estado": ""
+    }
+}

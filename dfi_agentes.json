@@ -1,0 +1,80 @@
+{
+    "oficiales_pfa": [
+        {
+            "id": "PFA-001",
+            "nombre": "Alexis",
+            "rango": "Comisario General",
+            "llave": "key_alexis_cg2026",
+            "acceso": "Oficial",
+            "intentos": 0,
+            "bloqueado": false
+        }
+    ],
+    "dfi_director": [
+        {
+            "id": "DIF-001",
+            "nombre": "Pablo",
+            "rango": "Director DFI",
+            "llave": "llave_maestra_dfi",
+            "acceso": "Master_Total",
+            "intentos": 0,
+            "bloqueado": false
+        }
+    ],
+    "civiles": [
+        {
+            "id_civil": "CIV-1001",
+            "nombre": "Base Central",
+            "nacionalidad": "Argentina",
+            "estado": "Verificado"
+        }
+    ],
+    "vehiculos": [],
+    "notas_campo": [
+        {
+            "autor": "Director Pablo",
+            "texto": "Sistema operativo inicializado.",
+            "timestamp": "2026-02-25 08:00:00"
+        }
+    ],
+    "archivos_desclasificados": [
+        {
+            "doc_id": "EXP-01",
+            "titulo": "Documento (2)_compressed.pdf"
+        },
+        {
+            "doc_id": "EXP-02",
+            "titulo": "Documento (7) Servidro de España_compressed.pdf"
+        },
+        {
+            "doc_id": "EXP-03",
+            "titulo": "Documento (8) evidencia servidor España_compressed.pdf"
+        }
+    ],
+    "oficiales": [
+        {
+            "nombre": "Alexis/Sargento ",
+            "rango": "Comisario General",
+            "llave": "key_alexis_cg2026",
+            "acceso": "Oficial"
+        },
+        {
+            "nombre": "Bruno",
+            "rango": "Inspector",
+            "llave": "bc_bruno_cpm",
+            "acceso": "Oficial"
+        },
+        {
+            "nombre": "Joel",
+            "rango": "Comisario",
+            "llave": "Key_joel_com2026",
+            "acceso": "Oficial"
+        },
+        {
+            "nombre": "Luis",
+            "rango": "Inspector ",
+            "llave": "001",
+            "acceso": "Oficial"
+        }
+    ]
+}
