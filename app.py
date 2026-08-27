@@ -1,6 +1,26 @@
 from flask import Flask, render_template_string, request, redirect, url_for, session, send_from_directory
 import os, json
+import requests
 from datetime import datetime
+
+SUPABASE_URL = os.environ.get("SUPABASE_URL")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
+
+def guardar_expediente_en_nube(titulo, archivo_url):
+    url = f"{SUPABASE_URL}/rest/v1/expedientes"
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "return=representation"
+    }
+    data = {
+        "titulo": titulo,
+        "archivo_url": archivo_url
+    }
+    response = requests.post(url, json=data, headers=headers)
+    return response.json()
+
 
 app = Flask(__name__)
 app.secret_key = 'dif_secret_2026'
